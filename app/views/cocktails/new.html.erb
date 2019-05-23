@@ -2,4 +2,9 @@
   <h1 style="color: white" class="m-5 text-center">Add a new cocktail</h1>
 
   <%= render 'form' %>
+  <div class="back-btn">
+    <%= link_to cocktails_path, class: 'btn btn-secondary w-100 mt-4' do %>
+      <i class="fas fa-arrow-circle-left">&nbsp;Back to list</i>
+    <% end %>
+  </div>
 </div>

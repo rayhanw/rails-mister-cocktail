@@ -1,3 +1,30 @@
 .doses {
   margin-top: 24px;
 }
+
+.drink img {
+  display: block;
+  margin: 0 auto;
+}
+
+.delete {
+  margin-left: 80px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ingredients, .description {
+  text-align: center;
+}
+
+.ingredients i {
+  text-align: left;
+}
+
+.back {
+  display: flex;
+  justify-content: flex-start;
+}
