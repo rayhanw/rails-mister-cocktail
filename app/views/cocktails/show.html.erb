@@ -2,46 +2,65 @@
   <h1 class="text-center m-5" style="color: white"><%= @cocktail.name %></h1>
 
   <div class="back">
-    <%= link_to cocktails_path, class: 'btn btn-primary' do %>
+    <%= link_to cocktails_path, class: 'btn btn-secondary' do %>
       <i class="fas fa-hand-point-left">&nbsp;Back</i>
     <% end %>
   </div>
 
-  <div class="drink">
-    <%= cl_image_tag @cocktail.photo, crop: :fit, width: 500, height: 300, alt: @cocktail.name %>
+  <div class="d-flex justify-content-around">
+    <%= cl_image_tag @cocktail.photo, crop: :fit, height: 450, alt: @cocktail.name %>
 
-    <div class="doses">
-      <div class="details">
-        <div class="ingredients">
-          <h4 style="color: white">Ingredients</h4>
-          <ul style="padding: 0;list-style: none; color: white">
-            <% @cocktail.doses.each do |dose| %>
-              <li>
-                <%= link_to dose_path(dose), method: :delete, confirm: 'Are you sure?' do %>
-                <i class="fas fa-trash-alt"></i>
-                <% end %>
-                <%= dose.ingredient.name %>
-              </li>
+    <div class="ingredients">
+      <h4 style="color: white">Ingredients</h4>
+      <ul style="padding: 0;list-style: none; color: white">
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <%= link_to dose_path(dose), method: :delete, confirm: 'Are you sure?' do %>
+            <i class="fas fa-trash-alt"></i>
             <% end %>
-          </ul>
-        </div>
+            <%= dose.ingredient.name %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
 
-        <div class="description">
-          <h4 style="color:white">Description</h4>
-          <ul style="padding:0;list-style:none;color:white">
-            <% @cocktail.doses.each do |dose| %>
-              <li>
-                <%= dose.description %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
+    <div class="description">
+      <h4 style="color:white">Description</h4>
+      <ul style="padding:0;list-style:none;color:white">
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <%= dose.description %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 
-  <div class="add text-center my-5">
-    <%= render 'doses/form' %>
-  </div>
+<div class="review my-5">
+  <h4 style="color: white">Reviews</h4>
+  <ul style="padding: 0;list-style: none;color:white">
+    <% @cocktail.reviews.each do |r| %>
+      <li>
+        <% r.rating.times do %>
+          <i class="fas fa-star rating" style="color:#f2b01e;font-style: italic;"></i>
+        <% end %>
+        <% if r.content.present? %>
+          &nbsp;<%= r.content %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
+  <div class="text-center">
+    <button class="btn btn-primary show-dose">Add a new ingredient</button>
+    <div class="dose-form dose-hidden my-3">
+      <%= render 'doses/form' %>
+    </div>
+
+    <button class="btn btn-primary show-review">Add a new review</button>
+    <div class="review-form review-hidden my-3">
+      <%= render 'reviews/form' %>
+    </div>
+  </div>
 </div>

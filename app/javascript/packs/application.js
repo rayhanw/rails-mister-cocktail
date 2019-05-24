@@ -1,10 +1,13 @@
 import 'bootstrap';
 
+import { doseButton, reviewButton } from 'components/form';
 import { aos } from 'components/aos';
-import { imgAnime } from 'components/anime';
+import { ratingStars } from 'components/anime';
 
-imgAnime();
+ratingStars();
 aos();
+doseButton();
+reviewButton();
 
 // You can also pass an optional settings object
 // below listed default settings

@@ -1,17 +1,21 @@
 import anime from 'animejs';
 
 
-const imgAnime = () => {
-  anime({
-    targets: '.rounded',
-    keyframes: [
-        {translateY: -40},
-        {translateY: 0},
-      ],
-      duration: 2000,
-      easing: 'easeOutElastic(1, .8)',
-      loop: true
+const ratingStars = () => {
+  const stars = document.querySelectorAll('.rating');
+
+  // console.log(stars);
+  stars.forEach((star) => {
+    console.log(star);
+    anime({
+      targets: star,
+      rotate: {
+        value: 360,
+        duration: 1200,
+        easing: 'linear'
+      },
+    });
   });
 };
 
-export { imgAnime };
+export { ratingStars };

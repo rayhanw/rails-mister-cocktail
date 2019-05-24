@@ -7,15 +7,6 @@
   margin: 0 auto;
 }
 
-.delete {
-  margin-left: 80px;
-}
-
-.details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .ingredients, .description {
   text-align: center;
 }
@@ -24,8 +15,20 @@
   text-align: left;
 }
 
-// back btn
 .back {
-  display: flex;
-  justify-content: flex-start;
+  position: absolute;
+  top: 64px;
+  right: 64px;
+}
+
+.review {
+  color: white;
+}
+
+.dose-hidden {
+  display: none;
+}
+
+.review-hidden {
+  display: none;
 }
