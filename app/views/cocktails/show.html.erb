@@ -8,8 +8,7 @@
   </div>
 
   <div class="drink">
-
-    <%= image_tag "https://www.thespruceeats.com/thmb/Pn3C5kVKZEgwJ5kEbAVHpgf1D50=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-daiquiri-recipes-759821_13_preview1-5b05f448ba61770036fbae90.jpeg", alt: "strawberry-daiquiri", class: 'rounded' %>
+    <%= cl_image_tag @cocktail.photo, crop: :fit, width: 500, height: 300, alt: @cocktail.name %>
 
     <div class="doses">
       <div class="details">

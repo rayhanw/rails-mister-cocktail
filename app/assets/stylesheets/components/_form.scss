@@ -6,3 +6,10 @@ form {
   margin: 0 auto;
   width: 600px;
 }
+
+form .photo-upload {
+  color: black;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 8px;
+}

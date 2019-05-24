@@ -21,6 +21,10 @@ gem 'webpacker'
 # dotenv
 gem 'dotenv-rails', groups: [:development, :test]
 
+# Images
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+
 # Front-end gems
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
