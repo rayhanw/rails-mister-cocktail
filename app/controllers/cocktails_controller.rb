@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
   def index
     # raise
-    @cocktails = params[:search] ? Cocktail.where('lower(name) LIKE ?', "#{params[:search].downcase}") : Cocktail.all
+    @cocktails = params[:search] ? Cocktail.where('lower(name) LIKE ?', "%#{params[:search].downcase}%") : Cocktail.all
   end
 
   def show
