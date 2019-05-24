@@ -10,7 +10,7 @@ const imgAnime = () => {
       ],
       duration: 2000,
       easing: 'easeOutElastic(1, .8)',
-      loop: false
+      loop: true
   });
 };
 

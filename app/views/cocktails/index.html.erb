@@ -12,18 +12,6 @@
 
 <div class="container mt-5">
   <div class="cards mb-5">
-    <div data-aos="fade-in" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Old Fashioned
-    </div>
-
-    <div data-aos="fade-in" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Negroni
-    </div>
-
-    <div data-aos="fade-in" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-      Coconut Daiquiri
-    </div>
-
     <% @cocktails.each do |c| %>
       <%= link_to cocktail_path(c), class: 'cocktail' do %>
         <div data-aos="flip-up" class="card-category" style="background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://www.thespruceeats.com/thmb/Pn3C5kVKZEgwJ5kEbAVHpgf1D50=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-daiquiri-recipes-759821_13_preview1-5b05f448ba61770036fbae90.jpeg')">

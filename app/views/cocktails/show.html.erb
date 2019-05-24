@@ -41,10 +41,8 @@
     </div>
   </div>
 
-  <div class="add text-center mt-5">
-    <!-- <p style="color: white">Add ingredient to <%#= @cocktail.name %></p> -->
-    <%= link_to new_cocktail_doses_path(@cocktail), class: 'btn btn-secondary' do %>
-      <p class="mb-0">Add ingredient to <%= @cocktail.name %></p><i class="fas fa-plus-circle" style="color: white"></i>
-    <% end %>
+  <div class="add text-center my-5">
+    <%= render 'doses/form' %>
   </div>
+
 </div>
