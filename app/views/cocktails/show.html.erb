@@ -8,7 +8,9 @@
   </div>
 
   <div class="d-flex justify-content-around">
-    <%= cl_image_tag @cocktail.photo, crop: :fit, height: 450, width: 500, alt: @cocktail.name %>
+    <% if @cocktail.photo.present? %>
+      <%= cl_image_tag @cocktail.photo, crop: :fit, height: 450, width: 500, alt: @cocktail.name %>
+    <% end %>
 
     <div class="ingredients">
       <h4 style="color: white">Ingredients</h4>
