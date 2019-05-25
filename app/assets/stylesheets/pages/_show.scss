@@ -19,6 +19,13 @@
   position: absolute;
   top: 64px;
   right: 64px;
+  @media screen and (max-width: 992px) {
+    top: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    top: 64px;
+    right: 10px;
+  }
 }
 
 .review {
@@ -35,4 +42,36 @@
 
 .ingredient-list, .description-list {
   text-align: left;
+}
+
+.mobile {
+  @media screen and (max-width: 992px) {
+    display: grid !important;
+    grid-template-rows: 1fr 160px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
+}
+
+.mobile > .photo {
+  @media screen and (max-width: 992px) {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 768px) {
+    width: 300px;
+  }
+}
+
+.show-dose {
+  @media screen and (max-width: 480px) {
+    margin-bottom: 16px;
+  }
+}
+
+.show-review {
+  @media screen and (max-width: 480px) {
+    margin-bottom: 16px;
+  }
 }

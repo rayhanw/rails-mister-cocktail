@@ -2,9 +2,15 @@ form label {
   color: white;
 }
 
-form {
+#new_cocktail, #new_dose, #new_review {
   margin: 0 auto;
   width: 800px;
+  @media screen and (max-width: 992px) {
+    width: 560px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 320px;
+  }
 }
 
 form .photo-upload {

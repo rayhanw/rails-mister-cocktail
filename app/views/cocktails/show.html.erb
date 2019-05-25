@@ -7,9 +7,9 @@
     <% end %>
   </div>
 
-  <div class="d-flex justify-content-around">
+  <div class="d-flex justify-content-around mobile">
     <% if @cocktail.photo.present? %>
-      <%= cl_image_tag @cocktail.photo, crop: :fit, height: 450, width: 500, alt: @cocktail.name %>
+      <%= cl_image_tag @cocktail.photo, crop: :fit, height: 450, width: 500, alt: @cocktail.name, class: 'photo' %>
     <% end %>
 
     <div class="ingredients">

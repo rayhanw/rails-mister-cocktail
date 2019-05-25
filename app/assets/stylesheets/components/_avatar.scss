@@ -2,6 +2,10 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  @media screen and (max-width: 992px) {
+    margin-top: 6px;
+    margin-left: 6px;
+  }
 }
 .avatar-large {
   width: 56px;

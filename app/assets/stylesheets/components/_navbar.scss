@@ -11,3 +11,37 @@
   width: 40px;
   height: 40px;
 }
+
+.search-form {
+  margin-right: 16px;
+}
+
+#search {
+  @media screen and (max-width: 480px) {
+    width: 280px;
+  }
+}
+
+.active {
+  @media screen and (max-width: 992px) {
+    margin-top: 7.5px;
+  }
+}
+
+.search-btn {
+  @media screen and (max-width: 480px) {
+    margin-left: 20px;
+  }
+}
+
+.new-cocktail {
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+img[alt="rayhanw"] {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}

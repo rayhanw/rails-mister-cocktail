@@ -7,21 +7,17 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <%= form_tag("/cocktails", method: 'get', class: 'form-inline my-2 my-lg-0') do %>
+      <%= form_tag("/cocktails", method: 'get', class: 'form-inline my-2 my-lg-0 search-form') do %>
         <%= text_field_tag :search, nil, placeholder: 'Search', class: 'form-control mr-sm-2' %>
-        <%= submit_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0' %>
+        <%= submit_tag 'Search', class: 'btn btn-outline-success my-2 my-sm-0 search-btn' %>
       <% end %>
       <li class="nav-item active">
-        <%= link_to new_cocktail_path, class: 'btn btn-info mr-2' do %>
+        <%= link_to new_cocktail_path, class: 'btn btn-info mr-2 new-cocktail' do %>
           <i class="fas fa-plus">&nbsp;New Cocktail</i>
         <% end %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "profile.jpg", alt: "rayhanw", class: 'avatar dropdown-toggle', id: 'navbarDropdown', aria: {toggle: 'dropdown', haspopup: 'true', expanded: 'false'} %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-        </div>
       </li>
     </ul>
   </div>
