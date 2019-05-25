@@ -19,12 +19,12 @@
   position: absolute;
   top: 64px;
   right: 64px;
-  @media screen and (max-width: 992px) {
-    top: 80px;
-  }
   @media screen and (max-width: 768px) {
     top: 64px;
     right: 10px;
+  }
+  @media screen and (max-width: 992px) {
+    top: 80px;
   }
 }
 
@@ -54,13 +54,13 @@
 }
 
 .mobile > .photo {
+  @media screen and (max-width: 768px) {
+    width: 300px;
+  }
   @media screen and (max-width: 992px) {
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
     margin: 0 auto;
-  }
-  @media screen and (max-width: 768px) {
-    width: 300px;
   }
 }
 
