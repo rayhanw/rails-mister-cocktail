@@ -11,16 +11,16 @@ require 'json'
 
 # Ingredient.create(name: 'mint leaves')
 
-URL = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-ingredient_serialized = open(URL).read
-ingredient = JSON.parse(ingredient_serialized)
+# URL = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+# ingredient_serialized = open(URL).read
+# ingredient = JSON.parse(ingredient_serialized)
 
-# puts ingredient['drinks'].count
-ingredient['drinks'].each do |i|
-  i.each do |_k, v|
-    Ingredient.create(name: v)
-  end
-end
+# # puts ingredient['drinks'].count
+# ingredient['drinks'].each do |i|
+#   i.each do |_k, v|
+#     Ingredient.create(name: v)
+#   end
+# end
 
 
 # url = 'https://cookieandkate.com/images/2017/12/best-moscow-mule-cocktail-recipe.jpg'
