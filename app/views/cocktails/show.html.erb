@@ -1,6 +1,10 @@
 <div class="container">
   <h1 class="text-center m-5" style="color: white"><%= @cocktail.name %></h1>
 
+  <% flash.each do |type, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+  <% end %>
+
   <div class="back">
     <%= link_to cocktails_path, class: 'btn btn-secondary' do %>
       <i class="fas fa-hand-point-left">&nbsp;Back</i>

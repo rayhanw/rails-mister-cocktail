@@ -3,11 +3,13 @@ import 'bootstrap';
 import { doseButton, reviewButton } from 'components/form';
 import { aos } from 'components/aos';
 import { ratingStars } from 'components/anime';
+import { hideAfterTime } from 'components/alert';
 
 ratingStars();
 aos();
 doseButton();
 reviewButton();
+hideAfterTime(3);
 
 // You can also pass an optional settings object
 // below listed default settings

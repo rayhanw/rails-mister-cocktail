@@ -18,8 +18,10 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params)
 
     if @cocktail.save
+      flash[:success] = 'Cocktail successfully added!'
       redirect_to cocktail_path(@cocktail)
     else
+      flash[:danger] = @cocktail.errors.full_messages.join(', ')
       render :new
     end
   end
