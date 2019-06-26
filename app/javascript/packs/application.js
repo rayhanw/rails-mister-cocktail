@@ -4,12 +4,14 @@ import { doseButton, reviewButton } from 'components/form';
 import { aos } from 'components/aos';
 import { ratingStars } from 'components/anime';
 import { hideAfterTime } from 'components/alert';
+import previewImageOnFileSelect from 'components/image_preview'
 
 ratingStars();
 aos();
 doseButton();
 reviewButton();
 hideAfterTime(3);
+previewImageOnFileSelect();
 
 // You can also pass an optional settings object
 // below listed default settings

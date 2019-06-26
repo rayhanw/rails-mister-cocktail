@@ -1,7 +1,13 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
-  <%= f.input :photo, input_html: {class: 'photo-upload'} %>
+  <%= f.input :photo, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'upload-photo' }, label: '📷 Upload a photo' %>
   <%= f.input :photo_cache, as: :hidden %>
+
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center my-4">
+      <%= image_tag "", width: 500, id: "photo-preview" %>
+    </div>
+  </div>
+
   <%= f.submit class: 'btn btn-success btn-lg w-100' %>
 <% end %>
-
