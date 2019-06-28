@@ -5,6 +5,10 @@
     <%= content_tag :div, msg, class: "alert alert-#{type}", role: 'alert' %>
   <% end %>
 
+  <div class="text-center mb-3">
+    <span class="badge badge-pill badge-primary"><%= @cocktail.tag_list %></span>
+  </div>
+
   <div class="back">
     <%= link_to cocktails_path, class: 'btn btn-secondary' do %>
       <i class="fas fa-hand-point-left">&nbsp;Back</i>

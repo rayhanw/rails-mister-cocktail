@@ -1,7 +1,14 @@
 class CocktailsController < ApplicationController
   def index
-    # raise
-    @cocktails = params[:search] ? Cocktail.where('lower(name) LIKE ?', "%#{params[:search].downcase}%") : Cocktail.all
+    # @cocktails = params[:search] ? @cocktails = Cocktail.where('lower(name) LIKE ?', "%#{params[:search].downcase}%") : @cocktails = Cocktail.all
+
+    if params[:search].present?
+      @cocktails = Cocktail.where('lower(name) LIKE ?', "%#{params[:search].downcase}%")
+    elsif params[:tag].present?
+      @cocktails = Cocktail.tagged_with(params[:tag])
+    else
+      @cocktails = Cocktail.all
+    end
   end
 
   def show
@@ -26,9 +33,17 @@ class CocktailsController < ApplicationController
     end
   end
 
+  # def tagged
+  #   if params[:tag].present?
+  #     @cocktails = Cocktail.tagged_with(params[:tag])
+  #   else
+  #     @cocktails = Cocktail.all
+  #   end
+  # end
+
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+    params.require(:cocktail).permit(:name, :photo, tag_list: [])
   end
 end

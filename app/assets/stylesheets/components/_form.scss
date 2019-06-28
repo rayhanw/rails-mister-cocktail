@@ -2,6 +2,43 @@ form label {
   color: white;
 }
 
+.cocktail_tag_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  legend {
+    display: none;
+  }
+}
+
+.form-check {
+  padding-left: 0;
+  input {
+    display: none;
+  }
+  label {
+    background: #b7b7b7;
+    padding: 20px;
+    border-radius: 5px;
+    opacity: .4;
+    flex: 0 0 30%;
+    text-align: center;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    &.active-tag {
+      background: #4dc8cb;
+      color: white;
+      opacity: 1;
+    }
+  }
+}
+
+.form-check:nth-of-type(2), .form-check:nth-of-type(3) {
+  padding-left: 1rem;
+}
+
 #new_cocktail, #new_dose, #new_review {
   margin: 0 auto;
   width: 800px;

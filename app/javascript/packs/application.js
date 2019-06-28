@@ -13,6 +13,12 @@ reviewButton();
 hideAfterTime(3);
 previewImageOnFileSelect();
 
+$(document).ready(function(){
+  $(".collection_check_boxes").click(function(){
+    $(this).toggleClass("active-tag");
+  });
+});
+
 // You can also pass an optional settings object
 // below listed default settings
 

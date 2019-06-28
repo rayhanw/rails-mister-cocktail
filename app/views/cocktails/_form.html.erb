@@ -1,5 +1,26 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
+  <%#= f.input :tag_list, as: :check_boxes, collection: ['light', 'medium', 'strong'] %>
+
+  <fieldset class="form-group check_boxes optional cocktail_tag_list">
+    <legend class="col-form-label pt-0">Tag list</legend>
+    <input type="hidden" name="cocktail[tag_list][]" value="">
+    <div class="tags-choices">
+      <div class="form-check">
+        <input class="form-check-input check_boxes optional" type="checkbox" value="light" name="cocktail[tag_list][]" id="cocktail_tag_list_light">
+        <label class="collection_check_boxes" for="cocktail_tag_list_light">light</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input check_boxes optional" type="checkbox" value="medium" name="cocktail[tag_list][]" id="cocktail_tag_list_medium">
+        <label class="collection_check_boxes" for="cocktail_tag_list_medium">medium</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input check_boxes optional" type="checkbox" value="strong" name="cocktail[tag_list][]" id="cocktail_tag_list_strong">
+        <label class="collection_check_boxes" for="cocktail_tag_list_strong">strong</label>
+      </div>
+    </div>
+  </fieldset>
+
   <%= f.input :photo, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'upload-photo' }, label: '📷 Upload a photo' %>
   <%= f.input :photo_cache, as: :hidden %>
 

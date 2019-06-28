@@ -18,6 +18,8 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'acts-as-taggable-on', '~> 6.0'
+
 # dotenv
 gem 'dotenv-rails', groups: [:development, :test]
 
