@@ -1,0 +1,17 @@
+.tags-list {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+}
+
+.tags-choices {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.badge {
+  padding: 0.5em .75em;
+  &:hover {
+    background-color: #1362bf;
+  }
+}

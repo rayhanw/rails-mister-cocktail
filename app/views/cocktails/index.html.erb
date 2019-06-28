@@ -9,7 +9,6 @@
   </div>
 </div>
 
-
 <div class="container mt-5">
   <div class="cards mb-5">
     <% @cocktails.each do |c| %>
@@ -18,6 +17,18 @@
           <%= c.name %>
         </div>
       <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="tags-list">
+    <% @cocktails.each do |c| %>
+      <div class="tag">
+        <% c.tag_list.each do |tag| %>
+          <%= link_to tag, cocktails_path(tag: tag), class: 'badge badge-pill badge-primary' %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
