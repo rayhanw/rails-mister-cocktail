@@ -25,7 +25,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # Images
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 
 # Front-end gems
 gem 'autoprefixer-rails'
